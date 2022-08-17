@@ -10,7 +10,14 @@ function App() {
   <div>
     <Header/>
     <main className={styles.main}>
-      <h1>Content</h1>
+      <div>
+        <h2>Todo List</h2>
+        <p>Formulario</p>
+      </div>
+      <div>
+        <h2>Suas Tarefas:</h2>
+        <p>Lista</p>
+      </div>
     </main>
     <Footer/>
   </div>
