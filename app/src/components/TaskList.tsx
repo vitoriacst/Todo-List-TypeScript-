@@ -2,7 +2,7 @@
 import { ITask } from '../interfaces/Task';
 
 // css
-import styles from './TaskList.module.css';
+import styles from './styles/TaskList.module.css';
 
 interface Props {
   taskList : ITask[];

@@ -2,7 +2,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { ITask } from '../interfaces/Task';
 // css
-import styles from './TaskForm.module.css';
+import styles from './styles/TaskForm.module.css';
 
 // interface
 
