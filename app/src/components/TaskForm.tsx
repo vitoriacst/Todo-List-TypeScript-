@@ -53,6 +53,7 @@ const TaskForm = ({btnText , taskList , setTaskList}: props) => {
               type="text"
               name="title"
               id="Titulo da tarefa"
+              value={title}
               onChange={handleChange}
             />
 
@@ -63,6 +64,7 @@ const TaskForm = ({btnText , taskList , setTaskList}: props) => {
               type="text"
               name="difficulty"
               onChange={handleChange}
+              value={difficulty}
             />
           </div>
             <input
