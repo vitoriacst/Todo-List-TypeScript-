@@ -1,4 +1,4 @@
-
+import { useState , changeEvent , FormEvent, useEffect } from 'react'
 // css
 import styles from './TaskForm.module.css'
 
@@ -9,6 +9,11 @@ interface props {
 }
 
 const TaskForm = ({btnText}: props) => {
+
+  const [id , setId] = useState<number>(0);
+  const [title , setTitle] = useState<string>("")
+  const [difficulty , setDifficulty] = useState<number>(0)
+
   return (
       <form className={styles.form}>
           <div
