@@ -1,8 +1,23 @@
 
+interface props {
+  btnText : string
+}
 
-const TaskForm = () => {
+const TaskForm = ({btnText}: props) => {
   return (
-    <div>Forms</div>
+    <form >
+        <div>
+          <label htmlFor="title">
+            Title
+          </label>
+          <input
+          type="text"
+          name="title"
+          id="Titulo da tarefa" />
+        </div>
+        <label htmlFor="difficulty"></label>
+        <input type="submit" name="difficulty" value={btnText} />
+    </form>
   )
 }
 

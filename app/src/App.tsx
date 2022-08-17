@@ -14,7 +14,7 @@ function App() {
     <main className={styles.main}>
       <div>
         <h2>Todo List</h2>
-        <TaskForm/>
+        <TaskForm btnText="Criar Tarefas"/>
       </div>
       <div>
         <h2>Suas Tarefas:</h2>
