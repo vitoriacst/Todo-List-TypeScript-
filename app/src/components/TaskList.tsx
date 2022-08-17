@@ -7,7 +7,7 @@ import styles from './styles/TaskList.module.css';
 interface Props {
   taskList : ITask[];
   handleDelete(id:number) : void;
-  handleEdit(): void;
+  handleEdit(task: ITask): void;
 }
 
 const TaskList = ({taskList , handleDelete , handleEdit }: Props) => {
@@ -27,7 +27,7 @@ const TaskList = ({taskList , handleDelete , handleEdit }: Props) => {
               </div>
               <div className={styles.actions}>
                 <i className='bi bi-pencil'onClick={()=>{
-                  handleEdit()
+                  handleEdit(element)
                 }}/>
                 <i className='bi bi-trash' onClick={()=>{handleDelete(element.id)
                 }}/>

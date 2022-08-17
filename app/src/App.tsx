@@ -13,6 +13,7 @@ import { useState } from "react";
 import { ITask } from './interfaces/Task';
 
 function App() {
+  const[taskUpdate , setTaskUpdate] = useState<ITask | null>(null)
   const [taskList , setTaskList ] = useState<ITask[]>([]);
   // -|> taking from the Itask interface and typing as an array
 
@@ -34,13 +35,20 @@ function App() {
     }
   }
 
-  const editTask = () :void => {
+  const editTask = (task: ITask) :void => {
     hideOrShowModal(true)
+    setTaskUpdate(task)
   }
 
   return (
   <div>
-    <Modal children={<TaskForm btnText="Editar Tarefa" taskList={taskList}/>}/>
+    <Modal
+      children={
+        <TaskForm
+            btnText="Editar Tarefa"
+            task={taskUpdate}
+            taskList={taskList}  />}
+      />
     <Header/>
     <main className={styles.main}>
       <div>
@@ -48,7 +56,8 @@ function App() {
         <TaskForm
           btnText="Criar Tarefas"
           taskList={taskList}
-          setTaskList={setTaskList}/>
+          setTaskList={setTaskList}
+           />
       </div>
       <div>
         <h2>Suas Tarefas:</h2>

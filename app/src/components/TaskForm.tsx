@@ -1,5 +1,5 @@
 
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { ITask } from '../interfaces/Task';
 // css
 import styles from './styles/TaskForm.module.css';
@@ -10,14 +10,24 @@ interface props {
   btnText : string
   taskList : ITask[]
   setTaskList? : React.Dispatch<React.SetStateAction<ITask[]>>
+  task? : ITask | null
   // -|> dispatching an event that will work with a list of tasks
+
 }
 
-const TaskForm = ({btnText , taskList , setTaskList}: props) => {
+const TaskForm = ({btnText , taskList , setTaskList , task}: props) => {
 
   const [id , setId] = useState<number>(0);
   const [title , setTitle] = useState<string>("");
   const [difficulty , setDifficulty] =useState<number>(0);
+
+  useEffect(()=>{
+    if(task){
+      setId(task.id);
+      setTitle(task.title)
+      setDifficulty(task.difficulty)
+    }
+  },[task])
 
   const addTaskHandler = (event: FormEvent<HTMLFormElement>) => {
    event.preventDefault();
