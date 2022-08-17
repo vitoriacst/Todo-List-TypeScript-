@@ -1,8 +1,24 @@
+// interface
+import { ITask } from '../interfaces/Task';
 
+interface Props {
+  taskList : ITask[]
+}
 
-const TaskList = () => {
+const TaskList = ({taskList}: Props) => {
   return (
-    <div>Lista de Tarefas</div>
+    <>
+      {
+        taskList.length > 0 ? (
+          taskList.map((element)=> (
+            <div key={element.id}>
+              {element.title}
+            </div>
+          ))
+        ) :
+        <p>Not found Tasks</p>
+      }
+    </>
   )
 }
 
