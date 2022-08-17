@@ -14,4 +14,8 @@ Executando o projeto
 ```javascript
   npm start
 ```
+Lib utilizada
+```javascript
+ npm i bootstrap-icons
+```
 a project based on a to-do list made using typescript
