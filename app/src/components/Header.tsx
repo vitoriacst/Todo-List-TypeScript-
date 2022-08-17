@@ -1,11 +1,11 @@
-import styles from './Header.module.css'
+import styles from './styles/Header.module.css';
 
 const Header = () => {
   return (
     <div>
        <header className={styles.header}>
           <h1>
-            React + TS Todo
+            Todo List
           </h1>
        </header>
   </div>
