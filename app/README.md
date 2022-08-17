@@ -11,7 +11,7 @@ que podem ser adicionadas, editadas e excluidas.
 - React Js
 - TypeScript
 - Hooks
-- Boostraṕ icons
+- Bootstrap icons
 - gradient generator
 - Html 5
 - Css 3
