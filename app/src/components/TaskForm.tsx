@@ -1,21 +1,35 @@
 
-import { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { ITask } from '../interfaces/Task';
 // css
 import styles from './TaskForm.module.css';
+import TaskList from './TaskList';
 
 // interface
 
 interface props {
   btnText : string
+  taskList : ITask[]
+  setTaskList? : React.Dispatch<React.SetStateAction<ITask[]>>
+  // -|> dispatching an event that will work with a list of tasks
 }
 
-const TaskForm = ({btnText}: props) => {
+const TaskForm = ({btnText , taskList , setTaskList}: props) => {
 
   const [id , setId] = useState<number>(0);
   const [title , setTitle] = useState<string>("");
   const [difficulty , setDifficulty] =useState<number>(0);
 
-  const addTaskHandler = () => {
+  const addTaskHandler = (event: FormEvent<HTMLFormElement>) => {
+   event.preventDefault();
+   const id = Math.floor(Math.random() * 1000)
+   const newTask : ITask = {id,title,difficulty}
+   setTaskList!([...taskList , newTask])
+   // -|> using ! to force the typescript to understand that it will get a result
+
+   setTitle("")
+   setDifficulty(0)
+   console.log(newTask);
 
   }
 

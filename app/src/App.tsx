@@ -8,16 +8,22 @@ import TaskList from "./components/TaskList";
 import styles from './App.module.css';
 
 // Interface
-import {ITask} from './interfaces/Task'
+import { useState } from "react";
+import { ITask } from './interfaces/Task';
 
 function App() {
+  const [taskList , setTaskList ] = useState<ITask[]>([]);
+  // -|> taking from the Itask interface and typing as an array
   return (
   <div>
     <Header/>
     <main className={styles.main}>
       <div>
         <h2>Todo List</h2>
-        <TaskForm btnText="Criar Tarefas"/>
+        <TaskForm
+          btnText="Criar Tarefas"
+          taskList={taskList}
+          setTaskList={setTaskList}/>
       </div>
       <div>
         <h2>Suas Tarefas:</h2>
