@@ -1,6 +1,8 @@
 // components
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
 
 // css
 import styles from './App.module.css';
@@ -12,11 +14,11 @@ function App() {
     <main className={styles.main}>
       <div>
         <h2>Todo List</h2>
-        <p>Formulario</p>
+        <TaskForm/>
       </div>
       <div>
         <h2>Suas Tarefas:</h2>
-        <p>Lista</p>
+        <TaskList/>
       </div>
     </main>
     <Footer/>
