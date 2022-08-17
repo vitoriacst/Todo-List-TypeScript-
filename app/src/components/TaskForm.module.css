@@ -14,7 +14,8 @@
 
 .form input[type="submit"]{
   background-color: yellow;
-  border: 1px solid black;
+  border: 1px solid yellow;
+  border-radius: 3px;
   transition: .5s;
   cursor: pointer;
 }
