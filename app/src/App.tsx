@@ -2,13 +2,16 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
+// css
+import styles from './App.module.css';
+
 function App() {
   return (
   <div>
     <Header/>
-    <h1>
-      content
-    </h1>
+    <main className={styles.main}>
+      <h1>Content</h1>
+    </main>
     <Footer/>
   </div>
   );
