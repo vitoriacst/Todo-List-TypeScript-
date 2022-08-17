@@ -1,6 +1,9 @@
 // interface
 import { ITask } from '../interfaces/Task';
 
+// css
+import styles from './TaskList.module.css';
+
 interface Props {
   taskList : ITask[]
 }
@@ -11,8 +14,8 @@ const TaskList = ({taskList}: Props) => {
       {
         taskList.length > 0 ? (
           taskList.map((element)=> (
-            <div key={element.id}>
-              <div>
+            <div key={element.id} className={styles.task}>
+              <div className={styles.details}>
                 <h4>
                   {element.title}
                 </h4>
@@ -20,7 +23,7 @@ const TaskList = ({taskList}: Props) => {
                   Dificuldade: {element.difficulty}
                 </p>
               </div>
-              <div>
+              <div className={styles.actions}>
                 <i className='bi bi-pencil'/>
                 <i className='bi bi-trash'/>
               </div>
