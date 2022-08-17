@@ -5,7 +5,7 @@ const Header = () => {
     <div>
        <header className={styles.header}>
           <h1>
-            React + TS Todo
+            Todo List
           </h1>
        </header>
   </div>

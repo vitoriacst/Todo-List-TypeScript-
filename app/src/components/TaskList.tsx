@@ -35,7 +35,7 @@ const TaskList = ({taskList , handleDelete , handleEdit }: Props) => {
             </div>
           ))
         ) :
-        <p>Not found Tasks</p>
+        <p className={styles.notFound}>você não possui tarefas</p>
       }
     </>
   )

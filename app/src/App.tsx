@@ -1,5 +1,5 @@
 // components
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import TaskForm from "./components/TaskForm";
@@ -62,7 +62,7 @@ function App() {
     <Header/>
     <main className={styles.main}>
       <div>
-        <h2>Todo List</h2>
+        <h2>Nova Tarefa</h2>
         <TaskForm
           btnText="Criar Tarefas"
           taskList={taskList}
@@ -70,7 +70,6 @@ function App() {
            />
       </div>
       <div>
-        <h2>Suas Tarefas:</h2>
         <TaskList
           taskList={taskList}
           handleDelete={deleteTask}
@@ -78,7 +77,7 @@ function App() {
         />
       </div>
     </main>
-    <Footer/>
+    {/* <Footer/> */}
   </div>
   );
 }

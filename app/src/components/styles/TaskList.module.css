@@ -3,8 +3,12 @@
   justify-content:space-between;
   max-width: 400px;
   margin: 0 auto;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid black;
   padding: 1em;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .details{
@@ -34,5 +38,10 @@
 }
 
 .actions i:hover {
-  color: yellow;
+  color: rgb(151, 151, 236);
+}
+
+.notFound{
+  color: white;
+  margin-top: 30px;
 }
